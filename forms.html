@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="UTF-8">
+      <title>Form</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+   
+      <!--
+         Form with HTML5 tags and basic CSS
+      -->
+      <style type="text/css">
+
+      body{
+         font-family: 'Roboto', sans-serif;
+      }
+         #container{
+            width: 550px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+
+         }
+
+         legend{
+            font-size: 30px;
+            background-color: black;
+            border-radius: 5px;
+            border: 1px solid #999;
+            padding: 4px 15px;
+            color: white;
+         }
+            
+         label.field{
+            display: block;
+            text-align: right;
+            width: 100px;
+            float: left;
+
+         }
+         input{
+            width: 200px;
+            border-radius: 5px;
+            padding: 6px 8px;
+         }
+         .field{
+            padding: 6px 8px;
+            clear: both;
+         }
+
+         #currency{
+             width: 220px;
+             border-radius: 5px;
+             padding: 6px 8px;
+         }
+
+         fieldset{
+            width: 450px;
+            border: 1px solid #999;
+            border-radius: 20px;
+            clear: both;
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color:orange;
+
+         }
+         
+         value{
+            color:white;
+         }
+         
+         
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <fieldset>
+            <legend> Registration</legend>
+      <form action="mail.php" method="post">
+        <label for="firstname" class="field"> First Name: </label><input type="text"  name="firstname" placeholder="required field" autofocus id="firstn">
+    <label for="email" class="field">  E-mail: </label><input type="email" name="email" placeholder="enter email">
+          <label for="website" class="field"> Website: </label><input type="url" name="website" placeholder="required field">
+       <label for="password" class="field" > Passwords*: </label><input type="password" name="password" placeholder="min 8 characters" required="">
+       <label for="telephone" class="field"> Telephone: </label><input type="telephone" name="telephone" placeholder="required field" >
+       <label for="telephone" class="field"> Address: </label><textarea placeholder="enter details" rows="4" col="50"></textarea><br>
+       <label for="range" class="field"> Range  </label><input type="range" name="slider" min="1" max="3"/>
+       <label for="passport" class="field"> Passport  </label> <input name="passport" type="text" pattern="[0-9]{7}[A-Za-z]{1}"
+title="Passport"/>
+       <label for="mobile" class="field"> Mobile  </label> <input type="telephone" name="mobile" pattern="[0][8][3-9][0-9]{7}"/>
+         <input type="number" name="points" min="0" max="100" step="10" value="30">
+         <label for="date" class="field"> Date</label> </label><input type="date" name="date "/>
+         <label><input type="checkbox" name="starter" value="Starter"/>Starter</label>
+        <label><input type="checkbox" name="main" value="main"/>Main</label>
+         <label><input type="checkbox" name="Desert" value="desert"/>Desert</label>
+         
+         <label><input type="radio" name="male" value="male">Male</label>
+<label><input type="radio" name="tea" value="Female">Female</label>
+<label><input type="radio" name="tea" value="Other">Other</label><br>
+
+<label for="starsign">Starsign:</label>
+<select id="starsign">
+     <option value="euro">Earth</option> 
+     <option value="dollar">Wind</option>
+     <option value="pound">Fire</option> 
+       
+</select><br>
+         <input list="musicgenres" name="musicgenres">
+   <datalist id="musicgenres">
+      <option value="Rock">
+      <option value="Metal">
+      <option value="Pop">
+   
+   </datalist><br>
+         <input type="submit" name="submit" id="submit"/>
+      </form>
+      </fieldset>
+        
+    </div>
+   </body>
+
+</html>
